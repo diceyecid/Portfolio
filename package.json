@@ -1,0 +1,36 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-pug": "pug src --out dist",
+    "build-sass": "sass --style=compressed src:dist",
+    "build": "npm run build-pug && npm run build-sass",
+    "watch-pug": "pug -w src --out dist",
+    "watch-sass": "sass -w src:dist",
+    "lite-server": "lite-server --baseDir=\"dist/\"",
+    "watch": "concurrently \"npm:watch-pug\" \"npm:watch-sass\" \"npm:lite-server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diceyecid/Portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Ross Shen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diceyecid/Portfolio/issues"
+  },
+  "homepage": "https://github.com/diceyecid/Portfolio#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "lite-server": "^2.6.1",
+    "pug": "^3.0.2",
+    "sass": "^1.44.0"
+  }
+}
