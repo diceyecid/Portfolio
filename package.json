@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+		"build-sass": "sass --style=compressed src/sass/stylesheets/main.scss:dist/stylesheets/main.css",
     "build-pug": "pug src --out dist",
-    "build-sass": "sass --style=compressed src:dist",
-    "build": "npm run build-pug && npm run build-sass",
+    "build": "npm run build-sass && npm run build-pug",
+		"watch-sass": "sass -w src/sass/stylesheets/main.scss:dist/stylesheets/main.css",
     "watch-pug": "pug -w src --out dist",
-    "watch-sass": "sass -w src:dist",
     "lite-server": "lite-server --baseDir=\"dist/\"",
-    "watch": "concurrently \"npm:watch-pug\" \"npm:watch-sass\" \"npm:lite-server\""
+    "watch": "concurrently \"npm:watch-sass\" \"npm:watch-pug\" \"npm:lite-server\""
   },
   "repository": {
     "type": "git",
