@@ -360,19 +360,34 @@ html {
  * Basic styles for links
  */
 a {
-  color: #e50050;
+  color: #3b4252;
   text-decoration: none;
 }
 a:hover, a:active, a:focus {
-  color: #222222;
+  color: #ffffff;
   text-decoration: underline;
+}
+
+/**
+ * Basic styles for body
+ */
+body {
+  background-color: #3b4252;
+}
+
+/**
+ * Basic styles for input
+ */
+input {
+  color: #3b4252;
+  background-color: #ffffff;
 }
 
 /**
  * Basic typography style for copy text
  */
 body {
-  color: #222222;
+  color: #ffffff;
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
@@ -392,7 +407,7 @@ body {
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  max-width: 1180px;
+  max-width: 74rem;
   /* 1 */
   margin-left: auto;
   /* 2 */
@@ -433,6 +448,141 @@ body {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.snap-container {
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  padding: 0.5rem 2rem;
+  border: 0;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  background-color: #3b4252;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+.btn:hover, .btn:focus {
+  background-color: #262a34;
+}
+.btn:active {
+  background-color: #101217;
+}
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  padding: 0.5rem 2rem;
+  border: 0;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  background-color: #81a1c1;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #5f88b0;
+}
+.btn-primary:active {
+  background-color: #496e93;
+}
+
+.section {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/**
+ * the cover section with greetings 
+ */
+#cover #hello {
+  font-size: 5rem;
+}
+#cover #my-name {
+  font-size: 3rem;
+}
+#cover #my-name #name {
+  color: #88c0d0;
+  font-weight: 800;
+}
+#cover #description {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+/**
+ * the about me section
+ */
+#about-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#about-content p {
+  width: 70%;
+  margin: 1rem;
+  text-align: left;
+}
+#about-content img {
+  width: 15rem;
+  margin: 1rem;
+  clip-path: circle(5.5rem);
+}
+
+/**
+ * the skills section
+ */
+/**
+ * the projects section
+ */
+/**
+ * the contact form section
+ */
+#contact .contact-form {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#contact .contact-input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 0.3rem;
+}
+#contact #name-input, #contact #email-input {
+  width: calc(50% - 1rem);
+}
+@media (max-width: 48rem) {
+  #contact #name-input, #contact #email-input {
+    width: calc(100% - 1rem);
+  }
+}
+#contact #subject-input, #contact #message-input {
+  width: calc(100% - 1rem);
+}
+#contact #message-input {
+  height: 10rem;
 }
 
 /*# sourceMappingURL=main.css.map */

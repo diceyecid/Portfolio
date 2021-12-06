@@ -2,6 +2,7 @@
 
 // 1. Configuration and helpers
 @import
+	'abstracts/nord_color',
   'abstracts/variables',
   'abstracts/functions',
   'abstracts/mixins';
@@ -20,7 +21,8 @@
 // 4. Layout-related sections
 @import
   'layout/header',
-  'layout/footer';
+  'layout/footer',
+  'layout/section';
 
 // 5. Components
 @import

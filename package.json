@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-		"build-sass": "sass --style=compressed src/sass/stylesheets/main.scss:dist/stylesheets/main.css",
+    "build-sass": "sass --style=compressed src/sass/stylesheets/main.scss:dist/stylesheets/main.css",
     "build-pug": "pug src --out dist",
     "build": "npm run build-sass && npm run build-pug",
-		"watch-sass": "sass -w src/sass/stylesheets/main.scss:dist/stylesheets/main.css",
+    "watch-sass": "sass -w src/sass/stylesheets/main.scss:dist/stylesheets/main.css",
     "watch-pug": "pug -w src --out dist",
     "lite-server": "lite-server --baseDir=\"dist/\"",
     "watch": "concurrently \"npm:watch-sass\" \"npm:watch-pug\" \"npm:lite-server\""

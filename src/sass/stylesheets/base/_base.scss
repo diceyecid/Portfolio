@@ -33,3 +33,20 @@ a {
     text-decoration: underline;
   }
 }
+
+/**
+ * Basic styles for body
+ */
+body
+{
+	background-color: $bg-color;
+}
+
+/**
+ * Basic styles for input
+ */
+input
+{
+	color: $bg-color;
+	background-color: $text-color;
+}

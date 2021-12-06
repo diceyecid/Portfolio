@@ -32,3 +32,24 @@
   }
 }
 
+/// Flex box mixin helper
+/// @param {String} $dir
+/// @param {Bool} $wrap [true]
+/// @param {String} $justify-content [center]
+/// @param {String} $align-items [center]
+@mixin flex( $dir, $wrap: true, $justify-content: center, $align-items: center )
+{
+	display: flex;
+	
+	@if $wrap
+	{
+		flex-flow: $dir wrap;
+	}
+	@else
+	{
+		flex-flow: $dir nowrap;
+	}
+
+	justify-content: $justify-content;
+	align-items: $align-items;
+}

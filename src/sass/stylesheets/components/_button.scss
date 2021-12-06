@@ -1,3 +1,43 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+@mixin btn( $btn-text-color: $text-color, $btn-bg-color: $bg-color )
+{
+	display: inline-block;
+	text-decoration: none;
+
+	margin: 0.5rem 0;
+	padding: 0.5rem 2rem;
+	border: 0;
+	border-radius: 0.3rem;
+
+	color: $btn-text-color;
+	background-color: $btn-bg-color;
+	box-shadow: 0.1rem 0.1rem 0.1rem rgba( 0, 0, 0, 0.1 );
+
+	transition-property: background-color; 
+	transition-duration: 0.2s;
+
+	cursor: pointer;
+
+	&:hover, &:focus 
+	{
+		background-color: darken( $btn-bg-color, 10% );
+	}
+
+	&:active
+	{
+		background-color: darken( $btn-bg-color, 20% );
+	}
+}
+
+.btn
+{
+	@include btn();
+
+	&-primary
+	{
+		@include btn( $btn-bg-color: $nord9 );
+	}
+}

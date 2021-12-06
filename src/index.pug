@@ -2,23 +2,29 @@ doctype html
 html( lang='en' )
 	head
 		title Ross Shen - Portfolio
-		link( rel='stylesheet', href='../stylesheets/main.css' )
-	body
+		link( rel='stylesheet', href='./stylesheets/main.css' )
+	body.container.snap-container
 		section#cover.section
-			p
+			span#hello
 				| Hello,
-			p
+			span#my-name
 				| My name is 
 				span#name Ross Shen
 				| .
-			p
+			span#description
 				| A full-stack web developer aiming to provide critical and creative solutions.
 
 		section#about.section
 			h1
 				| About
-			p
-				| Over the past few years, I have been working towards a Computing Science degree. As I proceed my academic career, I have developed strong interest in web development and accomplished outstanding web projects. I truly believe the future is migrating to a broswer-centric workflow with the rising of web applications, which leads to my passion for creating interactive applications and delivering smooth web experience. I would love to hear your innovative ideas and let's make them into reality!
+			div#about-content
+				img( 
+					src = '../assets/images/profile.jpg', 
+					alt = 'A comical drawing of Ross coding at a table with one hand holding a cup of coffee', 
+					width = '200px' 
+				)
+				p
+					| Over the past few years, I have been working towards a Computing Science degree. As I proceed my academic career, I have developed strong interest in web development and accomplished outstanding web projects. I truly believe the future is migrating to a broswer-centric workflow with the rising of web applications, which leads to my passion for creating interactive applications and delivering smooth web experience. I would love to hear your innovative ideas and let's make them into reality!
 
 		section#skills.section
 			h1
@@ -54,16 +60,18 @@ html( lang='en' )
 			h1
 				| Contact
 			form.contact-form
-				article.contact-input
-					label.visually-hidden( for='name-input' )
-						| Name
-					input#name-input( type='text', placeholder='Your name*', name='name', required )
-				article.contact-input
-					label.visually-hidden( for='email-input' )
-						| Email
-					input#email-input( type='email' placeholder='Your Email*', name='email', required )
-				article.contact-input
-					label.visually-hidden( for='message-input' )
-						| Message
-					textarea#message-input( placeholder='Your Message*', name='message', required )
+				label.visually-hidden( for='name-input' )
+					| Name
+				input#name-input.contact-input( type='text', placeholder='Your name*', name='name', required )
+				label.visually-hidden( for='email-input' )
+					| Email
+				input#email-input.contact-input( type='email' placeholder='Your Email*', name='email', required )
+				label.visually-hidden( for='subject-input' )
+					| Subject
+				input#subject-input.contact-input( type='text' placeholder='Subject*', name='subject', required )
+				label.visually-hidden( for='message-input' )
+					| Message
+				textarea#message-input.contact-input( placeholder='Your Message*', name='message', required )
+				input#submit-input.btn-primary( type='submit' value='submit' )
+			
 

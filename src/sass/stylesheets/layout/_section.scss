@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the sections of the site/application.
+// ----------------------------------------------------------------------------
+
+.snap-container 
+{
+	scroll-snap-type: y mandatory;
+}
+
+.section
+{
+	scroll-snap-align: start;
+	min-height: 100vh;
+}
