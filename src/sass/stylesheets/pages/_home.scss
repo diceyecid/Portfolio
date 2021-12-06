@@ -50,7 +50,6 @@
 	&-content
 	{
 		@include flex( $dir: row );
-		margin-bottom: 2rem;
 		
 		p
 		{
@@ -75,7 +74,18 @@
  */
 #skills
 {
+	.skills
+	{
+		&-container
+		{
+			@include flex( $dir: row );
+		}
 
+		&-item
+		{
+			margin: 1rem;
+		}
+	}
 }
 
 
@@ -85,7 +95,10 @@
  */
 #projects
 {
-
+	.project
+	{
+		
+	}
 }
 
 

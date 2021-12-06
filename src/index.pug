@@ -29,23 +29,28 @@ html( lang='en' )
 		section#skills.section
 			h1
 				| Skills
-			div.flow-container
+			div.skills-container
 				-
 					var skills =
 					[ 
-						'HTML5', 
-						'CSS3', 
-						'Javascript', 
-						'Typescript', 
-						'Angular', 
-						'WebGL', 
-						'Git', 
-						'Node.js', 
-						'Express.js' 
+						'html5', 
+						'css3',
+						'javascript', 
+						'pug',
+						'sass',
+						'typescript', 
+						'angular', 
+						'nodejs', 
+						'webgl', 
+						'git', 
 					]
 				each s in skills
-					article.flow-item
-						= s
+					img.skills-item(
+						src = '../assets/icons/' + s + '.svg',
+						alt = 'A logo of ' + s,
+						width = '100px'
+						height = '100px'
+					)
 
 		section#projects.section
 			h1
@@ -73,5 +78,3 @@ html( lang='en' )
 					| Message
 				textarea#message-input.contact-input( placeholder='Your Message*', name='message', required )
 				input#submit-input.btn-primary( type='submit' value='submit' )
-			
-

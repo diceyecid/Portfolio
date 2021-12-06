@@ -457,6 +457,7 @@ body {
 .section {
   scroll-snap-align: start;
   min-height: 100vh;
+  padding-bottom: 5rem;
 }
 
 .btn {
@@ -534,7 +535,6 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
 }
 #about-content p {
   width: 70%;
@@ -550,6 +550,16 @@ body {
 /**
  * the skills section
  */
+#skills .skills-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#skills .skills-item {
+  margin: 1rem;
+}
+
 /**
  * the projects section
  */
