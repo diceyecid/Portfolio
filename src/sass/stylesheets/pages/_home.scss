@@ -51,18 +51,18 @@
 	{
 		@include flex( $dir: row );
 		
-		p
-		{
-			width: 70%;
-			margin: 1rem;
-			text-align: left;
-		}
-
 		img
 		{
 			width: 15rem;
 			margin: 1rem;
 			clip-path: circle( 5.5rem );
+		}
+		
+		p
+		{
+			width: 70%;
+			margin: 1rem;
+			text-align: left;
 		}
 	}
 }
@@ -95,9 +95,20 @@
  */
 #projects
 {
-	.project
+	.projects
 	{
-		
+		&-container
+		{
+			@include flex( $dir: column );
+		}
+
+		&-item
+		{
+			@include on-event 
+			{
+				text-decoration: none;
+			}
+		}
 	}
 }
 
@@ -124,6 +135,7 @@
 
 			border: 0;
 			border-radius: 0.3rem;
+			box-shadow: 0.1rem 0.1rem 0.1rem rgba( 0, 0, 0, 0.1 );
 		}
 	}
 

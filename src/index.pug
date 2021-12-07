@@ -3,7 +3,28 @@ html( lang='en' )
 	head
 		title Ross Shen - Portfolio
 		link( rel='stylesheet', href='./stylesheets/main.css' )
+		script( src = './js/nav.js', defer )
 	body.container.snap-container
+		header.nav
+			div.nav-bar
+				a.nav-bar-name( href = 'index.html' )
+					| Ross Shen
+				button.nav-bar-toggle
+					img(
+						src = '../assets/icons/hamburger.svg',
+						alt = 'Menu toggle',
+						width = '48px',
+					)
+			nav.nav-menu
+				a.nav-menu-link( href = '#about' )
+					| About
+				a.nav-menu-link( href = '#skills' )
+					| Skills
+				a.nav-menu-link( href = '#projects' )
+					| Projects
+				a.nav-menu-link( href = '#contact' )
+					| Contact
+
 		section#cover.section
 			span#hello
 				| Hello,
@@ -55,11 +76,18 @@ html( lang='en' )
 		section#projects.section
 			h1
 				| Projects
-			article.project
-				h2
-					| Case Deck
-				p
-					| Digital product for BC HRT users to find specific relevant cases to support their case in court.
+			div.projects-container
+				a#case-deck.projects-item.card( href = './view/caseDeck.html' )
+					img(
+						src = '../assets/images/caseDeck.png',
+						alt = 'A 3D rendered image used as a background of Case Deck website',
+						width = '200px'
+					)
+					div.description
+						h2
+							| Case Deck
+						p
+							| A digital product for BC HRT users to find specific relevant cases to support their case in court.
 
 		section#contact.section
 			h1

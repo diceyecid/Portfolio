@@ -1,3 +1,87 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+$breakpoint: 36rem;
+
+.nav
+{
+	z-index: 9999;
+	position: sticky;
+	top: 0;
+	padding: 1rem;
+	background-color: $bg-color;
+	border-bottom: 2px solid $mid-grey;
+
+	display: grid;
+	align-items: center;
+
+	&-bar
+	{
+		@include flex( $dir: row, $justify-content: flex-start );
+
+		&-name
+		{
+			font-size: 2rem;
+		}
+
+		&-toggle
+		{
+			cursor: pointer;
+			border: none;
+			outline: none;
+			background: none;
+
+			margin-left: auto;
+		}
+	}
+}
+
+@media( min-width: 0 )
+{
+	.nav
+	{
+		grid-template-columns: 1fr;
+
+		&-bar-toggle
+		{
+			display: block;
+		}
+
+		&-menu
+		{
+			display: none;
+			margin-left: 0;
+
+			&-link 
+			{
+				display: block;
+			}
+		}
+	}
+}
+
+@media( min-width: $breakpoint )
+{
+	.nav
+	{
+		grid-template-columns: 30% 70%;
+		
+		&-bar-toggle
+		{
+			display: none;
+		}
+
+		&-menu
+		{
+			display: block;
+			margin-left: auto;
+
+			&-link
+			{
+				display: inline-block;
+				margin: 0 0.5rem;
+			}
+		}
+	}
+}

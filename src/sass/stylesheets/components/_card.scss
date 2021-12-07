@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the card component.
+// -----------------------------------------------------------------------------
+
+.card
+{
+	@include flex( $dir: row, $align-items: flex-start );
+
+	color: $bg-color;
+	background-color: $text-color;
+	border: 0;
+	border-radius: 1rem;
+	box-shadow: 0.5rem 0.5rem 0.5rem rgba( 0, 0, 0, 0.3 );
+
+	transition: transform 0.2s; 
+
+	&:hover, &:focus
+	{
+		transform: scale( 1.03 );
+	}
+
+	&:active
+	{
+		transform: scale( 1.01 );
+	}
+
+	img
+	{
+		width: 15rem;
+		margin: 1rem;
+		clip-path: circle( 50% );
+	}
+
+	.description
+	{
+		width: 70%;
+		margin: 1rem;
+		text-align: left;
+	}
+}
