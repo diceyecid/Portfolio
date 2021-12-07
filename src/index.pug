@@ -40,7 +40,7 @@ html( lang='en' )
 				| About
 			div#about-content
 				img( 
-					src = '../assets/images/profile.jpg', 
+					src = './assets/images/profile.jpg', 
 					alt = 'A comical drawing of Ross coding at a table with one hand holding a cup of coffee', 
 					width = '200px' 
 				)
@@ -67,7 +67,7 @@ html( lang='en' )
 					]
 				each s in skills
 					img.skills-item(
-						src = '../assets/icons/' + s + '.svg',
+						src = './assets/icons/' + s + '.svg',
 						alt = 'A logo of ' + s,
 						width = '100px'
 						height = '100px'
@@ -79,7 +79,7 @@ html( lang='en' )
 			div.projects-container
 				a#case-deck.projects-item.card( href = './view/caseDeck.html' )
 					img(
-						src = '../assets/images/caseDeck.png',
+						src = './assets/images/caseDeck.png',
 						alt = 'A 3D rendered image used as a background of Case Deck website',
 						width = '200px'
 					)
