@@ -140,7 +140,7 @@ html( lang='en' )
 		section#contact.section
 			h1
 				| Contact
-			form.contact-form
+			form.contact-form( action = 'mailto:rosss@sfu.ca', method = 'POST')
 				label.visually-hidden( for='name-input' )
 					| Name
 				input#name-input.contact-input( type='text', placeholder='Your name*', name='name', required )
