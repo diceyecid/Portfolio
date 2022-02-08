@@ -30,6 +30,10 @@ $brand-color: $nord1  !default;
 /// @type Color
 $bg-color: $nord1 !default;
 
+/// accent color
+/// @type Color
+$accent-color: $nord7 !default;
+
 /// Light grey
 /// @type Color
 $light-grey: rgb(237, 237, 237) !default;
@@ -49,7 +53,6 @@ $dark-grey: rgb(68, 68, 68) !default;
 /// Container's maximum width
 /// @type Length
 $max-width: 74rem !default;
-
 
 
 

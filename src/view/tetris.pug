@@ -1,0 +1,49 @@
+doctype html
+html( lang='en' )
+	head
+		title Ross Shen - Tetris
+		link( rel='stylesheet', href='../stylesheets/main.css' )
+		script( src = '../js/nav.js', defer )
+	body.container
+		header.nav
+			div.nav-bar
+				a.nav-bar-name( href = '../index.html' )
+					| Ross Shen
+				button.nav-bar-toggle
+					img(
+						src = '../assets/icons/hamburger.svg',
+						alt = 'Menu toggle',
+						width = '48px',
+					)
+			nav.nav-menu
+				a.nav-menu-link( href = '../index.html' )
+					| Home
+					
+		h1
+			| Tetris
+		p
+			| A broswer-based game powered by WebGL library to utilize GPU rendering
+
+		h2
+			| Description
+		p 
+			| The game window consists of a 20 x 10 square grid of appropriate size. There are seven standard Tetris tiles with the pivot of rotation indicated by a black dot. The game includes the classic functionalities for tile such as rotation, horizontal movement, downward acceleration, stack-up and clear. The code is programmed in an object-oriented fashion with clear file structure.
+		img.tetris-img(
+			src = '../assets/images/tetrisTiles.png',
+			alt = 'Tetris game board and the 7 Tetris tiles with pivot labeled by a black dot',
+			width = '800px',
+		)
+
+		h2
+			| External Links
+		ul
+			li
+				a(
+					href = 'https://github.com/diceyecid/tetris',
+					target = '_blank',
+					rel ='noopener noreferrer'
+				)
+					| Github repository
+
+		a.btn-primary( href = '../index.html' )
+			| Back

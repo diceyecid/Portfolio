@@ -26,7 +26,7 @@ html {
  * Basic styles for links
  */
 a {
-  color: $text-color;
+  color: $accent-color;
   text-decoration: none;
 
   @include on-event {

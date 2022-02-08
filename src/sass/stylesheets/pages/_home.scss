@@ -100,6 +100,7 @@
 		&-container
 		{
 			@include flex( $dir: column );
+			width: 100%;
 		}
 
 		&-item

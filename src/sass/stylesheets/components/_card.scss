@@ -6,6 +6,8 @@
 {
 	@include flex( $dir: row, $align-items: flex-start );
 
+	width: 100%;
+	margin-bottom: 2rem;
 	color: $bg-color;
 	background-color: $text-color;
 	border: 0;

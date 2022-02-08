@@ -8,6 +8,7 @@ $breakpoint: 36rem;
 {
 	z-index: 9999;
 	position: sticky;
+	height: 5rem;
 	top: 0;
 	padding: 1rem;
 	background-color: $bg-color;
@@ -34,6 +35,11 @@ $breakpoint: 36rem;
 
 			margin-left: auto;
 		}
+	}
+
+	a
+	{
+		color: $text-color;
 	}
 }
 
